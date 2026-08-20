@@ -4,7 +4,14 @@
   <p><strong>A personal, machine-learning powered chess engine that plays exactly like you.</strong></p>
 </div>
 
-![Landing Page](assets/landing.png)
+![Landing Page](assets/landing_new.png)
+
+## 🎨 User Interface
+<div align="center">
+  <img src="assets/config.png" width="45%" alt="Configuration Panel" style="margin-right: 2%">
+  <img src="assets/gameboard.png" width="45%" alt="Gameplay Board">
+  <p><em>Configure Bot Personality, Search Depth, and Time settings before diving into the beautifully crafted Dark Mode board.</em></p>
+</div>
 
 ## Overview
 
