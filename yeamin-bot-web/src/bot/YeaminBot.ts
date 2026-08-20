@@ -70,7 +70,8 @@ export class YeaminBot {
             const sideToMove = fenParts[1]; // 'w' or 'b'
             
             let isRepertoireMove = false;
-            if (fullMove <= 5) {
+            // Only force opening repertoire moves if they don't blunder a piece (max 1.5 pawns drop)
+            if (fullMove <= 5 && cplDrop <= 150) {
                 if (sideToMove === 'w' && ['e2e4', 'f2f4', 'g1f3'].includes(cand.move)) {
                     isRepertoireMove = true;
                 } else if (sideToMove === 'b' && ['g7g6', 'd7d6', 'g8f6'].includes(cand.move)) {
@@ -85,7 +86,7 @@ export class YeaminBot {
             const engineScore = 1.0 / cand.rank; // Simple reciprocal
             let finalScore = (1.0 - settings.styleStrength) * engineScore + (settings.styleStrength * styleProb);
 
-            // Apply massive bonus if it's a preferred repertoire move
+            // Apply massive bonus if it's a preferred repertoire move and safe
             if (isRepertoireMove) {
                 finalScore += 1000;
             }
@@ -96,7 +97,7 @@ export class YeaminBot {
                 styleProb,
                 engineScore,
                 finalScore,
-                isAcceptable: (cplDrop <= settings.maxCplDrop) || isRepertoireMove // Always allow repertoire moves
+                isAcceptable: (cplDrop <= settings.maxCplDrop)
             });
         }
 
