@@ -1140,3 +1140,73 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+    /* Setup Screen */
+    .ss-container {
+        grid-template-columns: 1fr;
+        height: 100vh;
+        max-height: none;
+        border-radius: 0;
+        margin: 0;
+        border: none;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ss-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        padding: 24px 20px;
+        gap: 16px;
+        flex: none;
+    }
+    
+    .ss-right {
+        padding: 24px 20px;
+        flex: none;
+        overflow: visible;
+    }
+
+    .ss-depth-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ss-stats {
+        gap: 4px;
+    }
+
+    /* Game View */
+    .game-main {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    
+    .game-board-col {
+        flex: none;
+        padding: 12px;
+    }
+    
+    .game-sidebar {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        flex: none;
+    }
+
+    .board-shell {
+        width: min(calc(100vw - 24px), calc(100vh - 240px));
+        height: min(calc(100vw - 24px), calc(100vh - 240px));
+    }
+    
+    .player-strip {
+        width: min(calc(100vw - 24px), calc(100vh - 240px));
+    }
+    
+    .history-panel {
+        min-height: 200px;
+    }
+}
