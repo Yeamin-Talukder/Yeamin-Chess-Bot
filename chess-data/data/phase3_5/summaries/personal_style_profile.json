@@ -1,0 +1,97 @@
+{
+    "performance": {
+        "average_cpl": 221.51226275055316,
+        "median_cpl": 16.0,
+        "top1_percentage": 37.379527539452106,
+        "top3_percentage": 64.08372466460654,
+        "top5_percentage": 75.48352363080734,
+        "outside_top5_percentage": 24.51647636919266
+    },
+    "color": {
+        "white": {
+            "average_cpl": 219.7602073070736,
+            "top1_percentage": 39.0215506719328
+        },
+        "black": {
+            "average_cpl": 223.24465886022676,
+            "top1_percentage": 35.755929098380946
+        }
+    },
+    "game_phase": {
+        "opening": {
+            "count": 128943,
+            "average_cpl": 69.7109575548886,
+            "top1_percentage": 36.379640616396394
+        },
+        "middlegame": {
+            "count": 143651,
+            "average_cpl": 339.60897592080806,
+            "top1_percentage": 38.3039449777586
+        },
+        "endgame": {
+            "count": 48745,
+            "average_cpl": 275.03579854344036,
+            "top1_percentage": 37.30023592163299
+        }
+    },
+    "time_control": [
+        {
+            "time_control": "180",
+            "count": 196677,
+            "avg_cpl": 211.11715147170233,
+            "median_cpl": 16.0,
+            "top1_pct": 37.12279524296181
+        },
+        {
+            "time_control": "600",
+            "count": 95558,
+            "avg_cpl": 227.66068774984825,
+            "median_cpl": 16.0,
+            "top1_pct": 38.4813411749932
+        },
+        {
+            "time_control": "60",
+            "count": 15361,
+            "avg_cpl": 276.7576980665321,
+            "median_cpl": 24.0,
+            "top1_pct": 33.74129288457783
+        },
+        {
+            "time_control": "120+1",
+            "count": 9130,
+            "avg_cpl": 258.5732749178532,
+            "median_cpl": 22.0,
+            "top1_pct": 37.29463307776561
+        },
+        {
+            "time_control": "300",
+            "count": 3298,
+            "avg_cpl": 264.82019405700424,
+            "median_cpl": 21.0,
+            "top1_pct": 38.144329896907216
+        }
+    ],
+    "pressure": {
+        "Advantage": {
+            "count": 39139,
+            "avg_cpl": 78.44446715552263
+        },
+        "Disadvantage": {
+            "count": 23385,
+            "avg_cpl": 109.61009193927731
+        },
+        "Equal": {
+            "count": 74858,
+            "avg_cpl": 62.52412567795025
+        },
+        "Losing": {
+            "count": 69877,
+            "avg_cpl": 356.2056899981396
+        },
+        "Winning": {
+            "count": 114080,
+            "avg_cpl": 315.358020687237
+        }
+    },
+    "clusters_found": 4
+}

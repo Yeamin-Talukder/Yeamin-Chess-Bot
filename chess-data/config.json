@@ -1,0 +1,12 @@
+{
+  "username": "yh_am_in",
+  "output_directory": "data",
+  "stockfish_path": "stockfish/stockfish-windows-x86-64-avx2.exe",
+  "stockfish": {
+    "depth": 10,
+    "multipv": 5,
+    "threads": 4,
+    "hash_mb": 512,
+    "batch_size": 1000
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "numerical_features": [
+        "move_number",
+        "w_pawns",
+        "b_pawns",
+        "w_knights",
+        "b_knights",
+        "w_bishops",
+        "b_bishops",
+        "w_rooks",
+        "b_rooks",
+        "w_queens",
+        "b_queens",
+        "w_material",
+        "b_material",
+        "material_balance",
+        "legal_move_count",
+        "stockfish_rank",
+        "candidate_eval",
+        "eval_drop",
+        "is_mate",
+        "cand_is_capture",
+        "cand_is_castling",
+        "cand_is_promotion",
+        "cand_is_check",
+        "cand_is_pawn_move"
+    ],
+    "categorical_features": [
+        "side_to_move",
+        "time_control",
+        "eco",
+        "opening",
+        "game_phase",
+        "cand_moving_piece"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "bot_name": "Yeamin Bot",
+    "model": {
+        "algorithm": "HistGradientBoosting",
+        "version": "1.0"
+    },
+    "performance": {
+        "imitation_top1": 0.4224029160241133,
+        "average_cpl": -4.376279265386233,
+        "median_cpl": 0.0
+    },
+    "style": {
+        "style_win_rate": 0.07430253750175242,
+        "style_loss_rate": 0.021169213514650218,
+        "style_net": 0.0531333239871022
+    },
+    "deployment": {
+        "model_size_mb": 1.86,
+        "engine_size_mb": 76.11,
+        "average_latency_ms": 3368.603959999927,
+        "p95_latency_ms": 5504.434135000429
+    },
+    "recommended": {
+        "style_strength": 1.0,
+        "max_cpl": 100,
+        "stockfish_depth": 18
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "style_strength": 1.0,
+    "max_cpl": 100,
+    "stockfish_depth": 18
+}

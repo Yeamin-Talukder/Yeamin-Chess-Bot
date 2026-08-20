@@ -1,0 +1,4 @@
+requests>=2.31.0
+chess>=1.10.0
+pandas>=2.1.0
+pyarrow>=13.0.0

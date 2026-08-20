@@ -1,0 +1,14 @@
+{
+    "total_positions": 321339,
+    "unique_positions": 321339,
+    "duplicate_positions": 0,
+    "unique_games": 10983,
+    "missing_fens": 0,
+    "invalid_fens": 0,
+    "missing_moves": 0,
+    "missing_color": 0,
+    "missing_engine_eval": 0,
+    "missing_cpl": 0,
+    "negative_cpl_errors": 0,
+    "invalid_moves": 0
+}

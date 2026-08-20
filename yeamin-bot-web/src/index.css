@@ -1,0 +1,70 @@
+:root {
+  --color-green: #2ECC71;
+  --color-dark: #2C3E50;
+  --color-darker: #1A252F;
+  --color-yellow: #F1C40F;
+  --color-red: #C0392B;
+  --color-text: #ECF0F1;
+  --color-text-muted: #95A5A6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-darker);
+  color: var(--color-text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Card */
+.card {
+  background-color: var(--color-dark);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: var(--color-green);
+  color: var(--color-darker);
+}
+
+.btn-secondary {
+  background-color: var(--color-dark);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Glow Effect */
+.glow-green {
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Layout utilities */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
