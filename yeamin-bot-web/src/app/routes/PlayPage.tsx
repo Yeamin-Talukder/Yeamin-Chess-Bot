@@ -19,7 +19,7 @@ interface GameSettings {
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const DEPTH_TIME: Record<number, string> = {
-    5: '< 1s', 6: '~1s', 7: '~2s', 8: '~3s', 9: '~4s', 10: '~5s',
+    3: 'Instant', 4: 'Instant', 5: '< 1s', 6: '~1s', 7: '~2s', 8: '~3s', 9: '~4s', 10: '~5s',
     11: '~8s', 12: '~12s', 13: '~18s', 14: '~25s', 15: '~35s',
     16: '~50s', 17: '~70s', 18: '~90s',
 };
@@ -88,9 +88,10 @@ function getMaterial(chess: Chess) {
 // ─── Setup Screen ─────────────────────────────────────────────────────────────
 
 const DEPTH_SPECTRUM = [
-    { label: 'Bullet', depth: 5, time: '< 1s', desc: 'Instant', icon: '⚡', color: '#e74c3c' },
-    { label: 'Blitz', depth: 10, time: '~5s', desc: 'Fast', icon: '🔥', color: '#F1C40F' },
-    { label: 'Rapid', depth: 14, time: '~25s', desc: 'Balanced', icon: '♟', color: '#3498db' },
+    { label: 'Casual', depth: 3, time: 'Instant', desc: 'Easiest', icon: '☕', color: '#2ecc71' },
+    { label: 'Bullet', depth: 5, time: '< 1s', desc: 'Fast', icon: '⚡', color: '#e74c3c' },
+    { label: 'Blitz', depth: 10, time: '~5s', desc: 'Balanced', icon: '🔥', color: '#F1C40F' },
+    { label: 'Rapid', depth: 14, time: '~25s', desc: 'Strong', icon: '♟', color: '#3498db' },
     { label: 'Classical', depth: 18, time: '~90s', desc: 'Deep', icon: '🏛', color: '#9b59b6' },
 ];
 
@@ -106,7 +107,7 @@ function SetupScreen({ onStart }: { onStart: (s: GameSettings) => void }) {
     const preset = STYLE_PRESETS[styleIdx];
     const previewStyle = hoverStyle !== null ? STYLE_PRESETS[hoverStyle] : preset;
     const thinkTime = getThinkTime(depth, preset.value);
-    const depthPct = ((depth - 5) / (18 - 5)) * 100;
+    const depthPct = ((depth - 3) / (18 - 3)) * 100;
 
     // Find which spectrum zone we're in
     const activeZone = DEPTH_SPECTRUM.reduce((best, zone) =>
@@ -261,7 +262,7 @@ function SetupScreen({ onStart }: { onStart: (s: GameSettings) => void }) {
                         {/* Custom slider */}
                         <div className="ss-slider-wrap">
                             <div className="ss-slider-labels">
-                                <span>Fast (5)</span>
+                                <span>Fast (3)</span>
                                 <span style={{ color: activeZone.color, fontWeight: 700 }}>Depth {depth}</span>
                                 <span>Deep (18)</span>
                             </div>
@@ -274,7 +275,7 @@ function SetupScreen({ onStart }: { onStart: (s: GameSettings) => void }) {
                                     <div className="ss-slider-thumb" style={{ left: `${depthPct}%`, borderColor: activeZone.color, boxShadow: `0 0 12px ${activeZone.color}60` }} />
                                 </div>
                                 <input
-                                    type="range" min={5} max={18} step={1} value={depth}
+                                    type="range" min={3} max={18} step={1} value={depth}
                                     onChange={e => setDepth(+e.target.value)}
                                     className="ss-slider-input"
                                 />
@@ -286,10 +287,11 @@ function SetupScreen({ onStart }: { onStart: (s: GameSettings) => void }) {
                                     <div className="ss-ts-fill" style={{ width: `${depthPct}%` }} />
                                 </div>
                                 <div className="ss-ts-labels">
-                                    <span>⚡ Instant</span>
-                                    <span>🔥 Fast</span>
-                                    <span>♟ Balanced</span>
-                                    <span>🏛 Deep</span>
+                                    <span>☕ Casual</span>
+                                    <span>⚡ Bullet</span>
+                                    <span>🔥 Blitz</span>
+                                    <span>♟ Rapid</span>
+                                    <span>🏛 Classic</span>
                                 </div>
                             </div>
                         </div>
