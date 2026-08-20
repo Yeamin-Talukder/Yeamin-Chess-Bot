@@ -13,7 +13,8 @@ Most chess bots are designed to play perfect, unhuman chess. **Yeamin Chess Bot*
 Instead of asking *"What is the objectively best move here?"*, the engine asks *"What move is Yeamin most likely to play?"* It captures my actual playing style, including my opening preferences, attacking tendencies, and even typical tactical patterns.
 
 <div align="center">
-  <img src="assets/gameplay.webp" width="600" alt="Gameplay Animation">
+  <img src="assets/gameplay.webp" width="45%" alt="Gameplay Animation" style="margin-right: 2%">
+  <img src="assets/interactivity.webp" width="45%" alt="Interactive UI Animation">
   <p><em>Sleek, dark-mode immersive web interface built with React and Chessground.</em></p>
 </div>
 
@@ -30,7 +31,7 @@ The bot uses a hybrid engine combining traditional chess computation with modern
 Unlike a standard computer opponent, the Yeamin bot is designed to be **beatable and realistic**.
 - **Tactical Blindspots:** Stockfish's internal `Skill Level` is artificially suppressed so it natively considers flawed candidate moves.
 - **Allowed Blunders:** The bot has a `maxCplDrop` allowance of 500 centipawns (a full piece drop!). If the machine learning model believes a blunder is *exactly* the kind of mistake Yeamin would make under pressure, it is allowed to play it!
-- **Premove System:** The UI fully supports instantly firing premoves via `chessground`, exactly like Lichess.
+- **Premove System:** The UI fully supports instantly firing premoves via `chessground` (as shown in the animations above), exactly like Lichess.
 
 ## 📊 Dataset & Model Statistics
 
