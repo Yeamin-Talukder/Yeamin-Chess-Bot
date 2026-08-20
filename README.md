@@ -19,12 +19,6 @@ Most chess bots are designed to play perfect, unhuman chess. **Yeamin Chess Bot*
 
 Instead of asking *"What is the objectively best move here?"*, the engine asks *"What move is Yeamin most likely to play?"* It captures my actual playing style, including my opening preferences, attacking tendencies, and even typical tactical patterns.
 
-<div align="center">
-  <img src="assets/gameplay.webp" width="45%" alt="Gameplay Animation" style="margin-right: 2%">
-  <img src="assets/interactivity.webp" width="45%" alt="Interactive UI Animation">
-  <p><em>Sleek, dark-mode immersive web interface built with React and Chessground.</em></p>
-</div>
-
 ## 🧠 How it Works (The Math)
 
 The bot uses a hybrid engine combining traditional chess computation with modern machine learning:
