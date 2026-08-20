@@ -26,12 +26,19 @@ The bot uses a hybrid engine combining traditional chess computation with modern
 3. **Machine Learning Evaluation:** A `HistGradientBoostingClassifier` (trained in Python and exported to JSON for the web) evaluates the candidate moves. It assigns a **probability score (0% to 100%)** representing how likely I am to play that move.
 4. **Style Blending:** Based on your chosen "Bot Personality" setting, the bot blends Stockfish's objective evaluation with the ML model's style probability to pick the final move. 
 
+### 🎭 Simulating Human Flaws
+Unlike a standard computer opponent, the Yeamin bot is designed to be **beatable and realistic**.
+- **Tactical Blindspots:** Stockfish's internal `Skill Level` is artificially suppressed so it natively considers flawed candidate moves.
+- **Allowed Blunders:** The bot has a `maxCplDrop` allowance of 500 centipawns (a full piece drop!). If the machine learning model believes a blunder is *exactly* the kind of mistake Yeamin would make under pressure, it is allowed to play it!
+- **Premove System:** The UI fully supports instantly firing premoves via `chessground`, exactly like Lichess.
+
 ## 📊 Dataset & Model Statistics
 
 - **Dataset Size:** 10,994 real games
 - **Positions Analyzed:** 321,339 unique board states
 - **Top-1 Imitation Rate:** `42.4%` (The bot predicts my exact real-life move as its #1 choice 42.4% of the time. Pure Stockfish only matches human moves ~36% of the time).
 - **Top-5 Coverage:** `74.4%` (My real-life move is within the model's top 5 predictions 75% of the time).
+- **Model Architecture:** 800 decision trees (`HistGradientBoostingClassifier`) with mathematically balanced class weights to account for candidate distribution.
 - **Time-Decay Weighting:** The ML pipeline uses exponential time-decay weighting (halving every year). Games I played recently have a massive influence on the model, while games from years ago when I was a beginner have very little weight.
 
 ## ⚔️ Hardcoded Repertoire
